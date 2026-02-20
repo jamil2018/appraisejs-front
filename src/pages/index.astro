@@ -1,4 +1,5 @@
 ---
+import { FlaskConical, ExternalLink } from "@lucide/astro";
 import "../styles/globals.css";
 ---
 
@@ -9,13 +10,49 @@ import "../styles/globals.css";
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
     <title>AppraiseJS</title>
   </head>
-  <body class="container mx-auto w-full h-screen">
-    <main class="w-full h-full grid place-items-center">
-      <header>
-        <h1 class="text-3xl font-bold">Astro</h1>
+  <body class="landing-bg container mx-auto w-full min-h-screen px-4 md:px-6">
+    <main
+      class="animate-fade-in w-full min-h-screen flex flex-col items-center justify-center gap-6 py-12"
+    >
+      <header class="flex flex-col items-center gap-6 text-center max-w-2xl">
+        <div
+          id="statement"
+          class="group flex items-center gap-3 md:gap-4"
+        >
+          <div
+            class="rounded-full p-2 ring-2 ring-primary/20 bg-primary/5 transition-transform duration-200 group-hover:scale-105"
+          >
+            <FlaskConical class="w-12 h-12 md:w-14 md:h-14 text-primary" />
+          </div>
+          <h1 class="text-5xl md:text-6xl font-semibold text-foreground">
+            AppraiseJS
+          </h1>
+        </div>
+        <div id="sub-heading">
+          <h2 class="text-lg md:text-xl text-muted-foreground tracking-wider">
+            Test management re-engineered
+          </h2>
+        </div>
       </header>
+      <footer class="mt-2">
+        <a
+          href="https://github.com/jamil2018/appraisejs-core"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm text-foreground transition-colors hover:bg-accent hover:border-primary/50"
+        >
+          <span>GitHub</span>
+          <ExternalLink class="w-4 h-4 shrink-0" />
+        </a>
+      </footer>
     </main>
   </body>
 </html>
